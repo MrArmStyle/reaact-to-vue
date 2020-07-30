@@ -168,6 +168,12 @@ h6 {
   background-image: url("../images/room-2.jpeg");
   min-height: 60vh;
 }
+.styleHero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* End of Hero */
 /* Banner */
 .banner {

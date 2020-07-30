@@ -1,8 +1,8 @@
 <template>
   <div class="banner">
-    <h1>{{title}}</h1>
+    <h1>{{ title }}</h1>
     <div />
-    <p>{{subtitle}}</p>
+    <p>{{ subtitle }}</p>
     <router-link to="/rooms" class="btn-primary">OUR ROOMS</router-link>
   </div>
 </template>
@@ -17,5 +17,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

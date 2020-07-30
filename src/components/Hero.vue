@@ -1,26 +1,29 @@
 <template>
   <div>
-    <header :class="hero">
-      <Banner title="Luxurious Room" subtitle="Deluxe Rooms Starting At $299" />
+    <header
+      :class="hero"
+      :style="img ? 'background: url(' + img + ') center/cover no-repeat;' : ''"
+    >
+      <Banner :title="title" :subtitle="subtitle" />
     </header>
-     <Services />
   </div>
 </template>
 
 <script>
 import Banner from "../components/Banner";
-import Services from "../components/Services";
 
 export default {
   components: {
-    Banner,Services
+    Banner,
   },
   props: {
+    img: null,
+    title: null,
+    subtitle: null,
     children: null,
     hero: { default: "defaultHero" },
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>
