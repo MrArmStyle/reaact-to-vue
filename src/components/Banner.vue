@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1>
     <div />
     <p>{{ subtitle }}</p>
-    <router-link to="/rooms" class="btn-primary">OUR ROOMS</router-link>
+    <router-link :to="btntext == 'return home' ? '/' : '/rooms'" class="btn-primary">{{ btntext }}</router-link>
   </div>
 </template>
 
@@ -12,9 +12,10 @@ export default {
   props: {
     title: null,
     subtitle: null,
-    children: null,
-  },
-};
+    btntext: null,
+    children: null
+  }
+}
 </script>
 
 <style></style>

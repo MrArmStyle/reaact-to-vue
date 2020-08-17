@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero title="Luxurious Room" subtitle="Deluxe Rooms Starting At $299"></Hero>
+    <Hero title="Luxurious Room" subtitle="Deluxe Rooms Starting At $299" btntext="OUR ROOMS"></Hero>
     <Services />
     <FeaturedRooms />
   </div>

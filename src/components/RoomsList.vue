@@ -2,13 +2,8 @@
   <div>
     <section class="roomslist">
       <div class="roomslist-center">
-        <div v-for="room in $store.state.data" :key="room.sys.id">
-          <Room
-            :name="room.fields.name"
-            :slug="room.fields.slug"
-            :images="room.fields.images"
-            :price="room.fields.price"
-          />
+        <div v-for="room in $store.state.sortedRooms" :key="room.id">
+          <Room :name="room.name" :slug="room.slug" :images="room.images" :price="room.price" />
         </div>
       </div>
     </section>
@@ -16,12 +11,12 @@
 </template>
 
 <script>
-import Room from "../components/Room";
+import Room from '../components/Room'
 export default {
   components: {
-    Room,
-  },
-};
+    Room
+  }
+}
 </script>
 
 <style></style>

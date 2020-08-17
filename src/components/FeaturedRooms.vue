@@ -2,13 +2,13 @@
   <div>
     <section class="featured-rooms">
       <Title title="featured rooms" />
-      <div class="featured-rooms-center" v-if="rooms">
-        <div v-for="room in rooms" :key="room.sys.id">
+      <div class="featured-rooms-center" v-if="$store.state.featuredRooms">
+        <div v-for="room in $store.state.featuredRooms" :key="room.id">
           <Room
-            :name="room.fields.name"
-            :slug="room.fields.slug"
-            :images="room.fields.images"
-            :price="room.fields.price"
+            :name="room.name"
+            :slug="room.slug"
+            :images="room.images"
+            :price="room.price"
           />
         </div>
       </div>
@@ -20,28 +20,22 @@
 </template>
 
 <script>
-import Loading from "./Loading";
-import Room from "./Room";
-import Title from "./Title";
+import Loading from './Loading'
+import Room from './Room'
+import Title from './Title'
 
 export default {
   data() {
     return {
-      loading: null,
-      rooms: null,
-    };
+      loading: null
+    }
   },
   components: {
     Loading,
     Room,
-    Title,
+    Title
   },
-  created() {
-    this.rooms = this.$store.state.data.filter((room) => {
-      return room.fields.featured === true;
-    });
-  },
-};
+}
 </script>
 
 <style></style>

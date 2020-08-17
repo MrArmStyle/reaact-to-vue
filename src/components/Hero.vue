@@ -4,7 +4,7 @@
       :class="hero"
       :style="img ? 'background: url(' + img + ') center/cover no-repeat;' : ''"
     >
-      <Banner :title="title" :subtitle="subtitle" />
+      <Banner :title="title" :subtitle="subtitle" :btntext="btntext" />
     </header>
   </div>
 </template>
@@ -20,6 +20,7 @@ export default {
     img: null,
     title: null,
     subtitle: null,
+    btntext: null,
     children: null,
     hero: { default: "defaultHero" },
   },

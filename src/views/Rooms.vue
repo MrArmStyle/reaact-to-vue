@@ -1,28 +1,20 @@
 <template>
   <div>
-    <Hero hero="roomsHero" title="our Room" subtitle="">
-      <Banner>
-        <router-link to="/" class="btn-primary">
-          return home
-        </router-link>
-      </Banner>
-    </Hero>
+    <Hero hero="roomsHero" title="our Room" subtitle btntext="return home"></Hero>
     <RoomsContainer />
   </div>
 </template>
 
 <script>
-import Hero from "../components/Hero";
-import Banner from "../components/Banner";
-import RoomsContainer from "../components/RoomsContainer";
+import Hero from '../components/Hero'
+import RoomsContainer from '../components/RoomsContainer'
 
 export default {
   components: {
     Hero,
-    Banner,
-    RoomsContainer,
-  },
-};
+    RoomsContainer
+  }
+}
 </script>
 
 <style></style>
